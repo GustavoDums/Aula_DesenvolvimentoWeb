@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  </head>
+  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+    <p class="text-center fs-2 fw-bold fst-italic">Formulário de cadastro</p>
+    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#pesquisarModal">
+        <i class="bi bi-search"></i>
+    </button>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <button type="button" title="Excluir" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluirModal">
+        <i class="bi bi-trash-fill"> Excluir</i>
+    </button>
+    <button type="button" title="Cancelar" class="btn btn-primary"><i class="bi bi-x-lg"></i> Cancelar</button>
+    <button type="button" title="Salvar" class="btn btn-info"><i class="bi bi-floppy-fill"></i></i> Salvar</button>
+    
+    <div class="modal fade" id="pesquisarModal" tabindex="-1" aria-labelledby="pesquisarModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="pesquisarModalLabel">Pesquisar</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td><button type="button" title="Salvar" class="btn btn-info"><i class="bi bi-file-earmark-arrow-up"></i></button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td><button type="button" title="Salvar" class="btn btn-info"><i class="bi bi-file-earmark-arrow-up"></i></button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td><button type="button" title="Salvar" class="btn btn-info"><i class="bi bi-file-earmark-arrow-up"></i></button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="modal fade" id="excluirModal" tabindex="-1" aria-labelledby="excluirModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="excluirModalLabel">Tem certeza?</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Tem certeza que deseja <strong>excluir</strong> estes dados?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Sim <i class="bi bi-check-lg"></i></button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Não<i class="bi bi-exclamation-lg"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
