@@ -85,7 +85,7 @@
 
         col-md-12 col-sm-12
       -->
-      <p class="text-center fs-2 fw-bold fst-italic">Formulário de Cadastro.</p>
+      <p class="text-center fs-2 fw-bold fst-italic" id="titulo">Formulário de Cadastro.</p>
       <div class="mb-3 text-end">
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalpesquisar" title="Pesquisar">
               <i class="bi-search"></i> 
@@ -105,9 +105,13 @@
               <input type="social" class="form-control" id="social" placeholder="Rede Social">
           </div>
           <div class="mb-3">
+            <label for="site" class="form-label">Idade</label>
+            <input type="site" class="form-control" id="idade" placeholder="Idade">
+          </div>
+          <div class="mb-3">
             <label for="site" class="form-label">Site</label>
             <input type="site" class="form-control" id="site" placeholder="Site">
-        </div>
+          </div>
           <div class="mb-3 text-end">
               <button type="button" class="btn btn-danger"><i class="bi-trash"></i> Excluir</button>
               <button type="reset" class="btn btn-info"><i class="bi-reply"></i> Cancelar</button>
@@ -121,15 +125,21 @@
         var Email = document.getElementById('email');
         var Social = document.getElementById('social');
         var Site = document.getElementById('site');
+        var Idade = document.getElementById('idade');
         var dadosNome = Nome.value;
         var dadosEmail = Email.value;
         var dadosSocial = Social.value;
-        var dadosSite = Site.value;
-        Site.value = 'google.com.br'
-        console.log(dadosNome+" "+dadosEmail+" "+dadosSocial+" "+dadosSite);
+        var dadosIdade = Idade.value;
+
+        Idade.value = parseInt(dadosIdade)+10;
+
+        Site.value = "google.com.br"
+        
+        var otitulo = document.getElementById('titulo')
+        otitulo.innerText = "Cadastrado"
+
+        console.log (dadosNome+' '+dadosEmail+' '+dadosSocial+' '+dadosIdade);
       }
     </script>
   </body>
 </html>
-git config --global user.email "gustavogdums@gmail.com"
-  git config --global user.name "Gustavo Dums"
